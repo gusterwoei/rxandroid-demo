@@ -1,4 +1,4 @@
-package com.guster.rxandroiddemo;
+package com.guster.rxandroiddemo.chat;
 
 /**
  * Created by Gusterwoei on 7/21/17.

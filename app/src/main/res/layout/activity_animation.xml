@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lyt_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue1">
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/shopping_logo"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+        <TextView
+            style="@style/WhiteTextView"
+            android:id="@+id/txt_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lorem Ipsum"/>
+        <TextView
+            style="@style/WhiteTextView"
+            android:id="@+id/txt_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_text1"
+            android:text="consectetur adipiscing elit"/>
+        <TextView
+            style="@style/WhiteTextView"
+            android:id="@+id/txt_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_text2"
+            android:text="Excepteur sint occaecat cupidatat non"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/lyt_footer_content"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="-135dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/footer_content_bg">
+        <TextView
+            android:id="@+id/txt_apply_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Quis autem vel eum iure reprehenderit qui in ea"/>
+        <Button
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:id="@+id/btn_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:backgroundTint="@color/green1"
+            android:textColor="@color/white"
+            android:text="Apply"/>
+    </LinearLayout>
+</RelativeLayout>

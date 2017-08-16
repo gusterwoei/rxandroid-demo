@@ -1,4 +1,4 @@
-package com.guster.rxandroiddemo;
+package com.guster.rxandroiddemo.chat;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,10 +9,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.guster.rxandroiddemo.R;
 import com.jakewharton.rxbinding2.support.v7.widget.RecyclerViewScrollEvent;
 import com.jakewharton.rxbinding2.support.v7.widget.RxRecyclerView;
 import com.jakewharton.rxbinding2.view.RxView;
-import com.jakewharton.rxbinding2.widget.RxAdapterView;
 import com.jakewharton.rxbinding2.widget.RxTextView;
 import com.jakewharton.rxbinding2.widget.TextViewAfterTextChangeEvent;
 
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         llm.setStackFromEnd(true);
         listData.setLayoutManager(llm);
 
-        MyAdapter adapter = new MyAdapter(getApplicationContext());
+        ChatMessageAdapter adapter = new ChatMessageAdapter(getApplicationContext());
         listData.setAdapter(adapter);
 
         RxRecyclerView.scrollEvents(listData).subscribe(new Consumer<RecyclerViewScrollEvent>() {
@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
      * @param message
      */
     private void addMessage(int type, String message) {
-        final MyAdapter adapter = (MyAdapter) listData.getAdapter();
+        final ChatMessageAdapter adapter = (ChatMessageAdapter) listData.getAdapter();
         int position = adapter.addItem(new ListItem(type, message));
         adapter.notifyItemInserted(position);
 
