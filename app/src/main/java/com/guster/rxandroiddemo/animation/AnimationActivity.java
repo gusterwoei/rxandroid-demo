@@ -82,8 +82,8 @@ public class AnimationActivity extends BaseActivity {
         imglogo.setScaleX(1.5f);
         imglogo.setScaleY(1.5f);
 
-        txtText1.setTranslationX(-800f);
-        txtText2.setTranslationX(-800f);
+        txtText1.setTranslationX(-500f);
+        txtText2.setTranslationX(-700f);
         txtText3.setTranslationX(-800f);
 
         lytFooterContent.setAlpha(0);
@@ -104,15 +104,16 @@ public class AnimationActivity extends BaseActivity {
         ObjectAnimator scaleYImgLogo = ObjectAnimator.ofFloat(imglogo, "scaleY", 1).setDuration(duration);
 
         ObjectAnimator translateTxtText1 = ObjectAnimator.ofFloat(txtText1, "x", 0).setDuration(duration);
+        translateTxtText1.setStartDelay(500);
         ObjectAnimator translateTxtText2 = ObjectAnimator.ofFloat(txtText2, "x", 0).setDuration(duration);
+        translateTxtText2.setStartDelay(600);
         ObjectAnimator translateTxtText3 = ObjectAnimator.ofFloat(txtText3, "x", 0).setDuration(duration);
+        translateTxtText3.setStartDelay(700);
 
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.play(translateLytRoot).with(fadeInLytRoot);
         animatorSet.play(fadeInImgLogo).with(scaleXImgLogo).with(scaleYImgLogo).after(200);
-        //animatorSet.playSequentially(translateTxtText1, translateTxtText2, translateTxtText3);
-        animatorSet.play(translateTxtText1).before(translateTxtText2).after(300);
-        animatorSet.play(translateTxtText2).before(translateTxtText3).after(500);
+        animatorSet.play(translateTxtText1).with(translateTxtText2).with(translateTxtText3);
         animatorSet.start();
     }
 }
