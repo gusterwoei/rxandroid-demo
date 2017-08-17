@@ -38,6 +38,20 @@
             android:layout_below="@id/txt_text2"
             android:text="Excepteur sint occaecat cupidatat non"/>
     </RelativeLayout>
+    <View
+        android:id="@+id/lyt_footer_layer2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="-115dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/footer_content_bg2"/>
+    <View
+        android:id="@+id/lyt_footer_layer1"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="-125dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/footer_content_bg1"/>
     <LinearLayout
         android:id="@+id/lyt_footer_content"
         android:layout_width="match_parent"
@@ -51,8 +65,9 @@
             android:id="@+id/txt_apply_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             android:textColor="@color/black"
-            android:text="Quis autem vel eum iure reprehenderit qui in ea"/>
+            android:text="Quis autem vel eum iure\nreprehenderit qui in ea"/>
         <Button
             style="@style/Widget.AppCompat.Button.Colored"
             android:id="@+id/btn_apply"
@@ -63,4 +78,11 @@
             android:textColor="@color/white"
             android:text="Apply"/>
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/view_rain"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/flower"/>
 </RelativeLayout>
